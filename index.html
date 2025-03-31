@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>To-Do List</h2>
+        
+        <div id="auth-section">
+            <h3>Login / Register</h3>
+            <input type="text" id="username" placeholder="Enter Username">
+            <input type="password" id="password" placeholder="Enter Password">
+            <button onclick="register()">Register</button>
+            <button onclick="login()">Login</button>
+        </div>
+
+        <div id="task-section" style="display: none;">
+            <h3>Welcome, <span id="user-name"></span></h3>
+            <input type="text" id="task-input" placeholder="Enter Task">
+            <button onclick="addTask()">Add Task</button>
+            <ul id="task-list"></ul>
+            <button onclick="logout()" class="logout-btn">Logout</button>
+        </div>
+
+        <!-- Edit Task Modal -->
+        <div id="edit-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeEditModal()">&times;</span>
+                <h3>Edit Task</h3>
+                <input type="text" id="edit-task-input">
+                <button onclick="updateTask()">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
